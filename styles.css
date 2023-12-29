@@ -24,6 +24,9 @@
     --ui: 'X-O', sans-serif;
     --normal: 'LF-normal', sans-serif;
     --bold: 'LF-Bold', sans-serif;
+    --bg: #D5E6EC;
+    --header: #5E689B; /* 404987 */
+    --xo: #0c0e2d;
 }
 
 /* GLOBAL STYLES */
@@ -33,15 +36,119 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.container {
+    background-color: var(--bg);
+    height:100vh;
+    display:grid;
+    grid-template-rows:152px 1fr 42px;
+}
+
+/* HEADER */
+.header {
+    background-color:var(--header);
+    font-family:'Logo-font', sans-serif;
+    font-size:88px;
+    display:grid;
+    border-bottom:2px dotted var(--xo);
+}
+
+.header .title {
+    place-self:center;
+    color:aliceblue;
+}
+
+/* GAME-CONTAINER */
+.game-container {
+    width:100%;
+    display:grid;
+    grid-template-rows: 80px 440px 80px auto;
+    place-items:center;
+    color: var(--xo);
+}
+
+.game-grid {
+    background-color: var(--xo);
+    font-family: var(--ui);
+    align-self:center;
+    place-items:center;
+    display:grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(3,auto);
+    gap:6px;
+    width:400px;
+    height:400px;
+    padding:6px 6px 6px 6px;
+}
+
+.game-grid div {
+    background-color:var(--bg);
+    width:125.33px;
+    height:125.33px;
+    display:grid;
+    place-items:center;
+    font-size:110px;
+    cursor: pointer;
+}
+
+/* GAME DISPLAY */
+.player-label p {
+    display: inline;
+    font-family:var(--bold);
+    font-size:48px;
+}
+
+.player-label, .winner-label {
+    font-family:var(--bold);
+    font-size:48px;
+}
+
+.player-label {
+    padding-top: 11px;
+}
+
+.winner-label, .restart {
+    align-self:start;
+}
+
+/* removing defaults */
+.restart {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.restart {
+    background-color: #8692B6;
+    padding: 10px;
+    border-radius: 5px;
+    width: 180px;
+    height: 55px;
+    font-size: 32px;
+    font-family:var(--bold);
+    color:aliceblue;
+    transition: all 0.3s ease;
+}
+
+.restart:active {
+    background-color: #707A98;
+}
+
+
 /* FOOTER */
 .footer {
     font-family:var(--normal);
-    text-align:center;
+    place-self:center;
     font-size:18px;
-    padding-bottom:5px;
-    background-color: #ffffff; /* Replace with your color variable */
-    height: 3.5vh;
-    width: 100%;
 }
 
 a:hover {
