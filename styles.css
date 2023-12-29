@@ -1,0 +1,50 @@
+/* FONT FACES */
+@font-face {
+    font-family: Logo-font;
+    src: url("assets/fonts/cheri.regular.ttf");
+}
+
+@font-face {
+    font-family: LF-Normal;
+    src: url("assets/fonts/LibreFranklin-Medium.ttf");
+}
+
+@font-face {
+    font-family: LF-Bold;
+    src: url("assets/fonts/LibreFranklin-Bold.ttf");
+}
+
+@font-face {
+    font-family: X-O;
+    src: url("assets/fonts/fredoka-one.one-regular.ttf");
+}
+
+/* ROOT */
+:root {
+    --ui: 'X-O', sans-serif;
+    --normal: 'LF-normal', sans-serif;
+    --bold: 'LF-Bold', sans-serif;
+}
+
+/* GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FOOTER */
+.footer {
+    font-family:var(--normal);
+    text-align:center;
+    font-size:18px;
+    padding-bottom:5px;
+    background-color: #ffffff; /* Replace with your color variable */
+    height: 3.5vh;
+    width: 100%;
+}
+
+a:hover {
+    text-decoration: underline;
+    font-family:var(--bold);
+}
