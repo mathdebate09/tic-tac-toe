@@ -46,7 +46,7 @@ a {
     background-color: var(--bg);
     height:100vh;
     display:grid;
-    grid-template-rows:152px 1fr 42px;
+    grid-template-rows:152px auto 42px;
 }
 
 /* HEADER */
